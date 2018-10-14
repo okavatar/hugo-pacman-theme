@@ -14,6 +14,7 @@
       {{ range .Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
+	  {{ if .Site.Params.ShowSearch }}
       <li>
         <form class="search" method="get" action="https://www.google.com/search">
           <div>
@@ -21,6 +22,7 @@
           </div>
         </form>
       </li>
+	  {{ end }}
     </ul>
   </nav>
 </div>
