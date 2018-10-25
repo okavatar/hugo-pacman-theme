@@ -3,7 +3,7 @@
 <div class="article-tags">
   <span></span>
   {{ range .Params.tags }}
-  <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
+  <a href="{{ "" | relURL }}tags/{{ . | urlize }}">{{ . }}</a>
   {{ end }}
 </div>
 {{ end }}
@@ -14,7 +14,7 @@
 <div class="article-categories">
   <span></span>
   {{ range .Params.categories }}
-  <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}">{{ . }}</a>
+  <a class="article-category-link" href="{{ "" | relURL }}categories/{{ . | urlize }}">{{ . }}</a>
   {{ end }}
 </div>
 {{ end }}

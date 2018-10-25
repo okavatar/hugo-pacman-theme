@@ -4,7 +4,7 @@
   <p class="asidetitle">{{ .Site.Params.Strings.TagCloud }}</p>
   <div class="tagcloudlist clearfix">
     {{ range $name, $items := .Site.Taxonomies.tags }}
-    <a href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower  }}" style="font-size: 12px;">{{ $name }}</a>
+    <a href="{{ "" | relURL }}tags/{{ $name | urlize | lower  }}" style="font-size: 12px;">{{ $name }}</a>
     {{ end }}
   </div>
 </div>

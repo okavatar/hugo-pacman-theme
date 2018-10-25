@@ -4,7 +4,7 @@
 	<p class="asidetitle">{{ .Site.Params.Strings.Tags }}</p>
 		<ul class="clearfix">
       {{ range $name, $items := .Site.Taxonomies.tags }}
-			<li><a href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower }}" title="{{ $name }}">{{ $name }}<sup>{{ len $items }}</sup></a></li>
+			<li><a href="{{ "" | relURL }}tags/{{ $name | urlize | lower }}" title="{{ $name }}">{{ $name }}<sup>{{ len $items }}</sup></a></li>
       {{ end }}
 		</ul>
 </div>

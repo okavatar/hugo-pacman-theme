@@ -1,4 +1,4 @@
-<script src="{{ .Site.BaseURL }}js/jquery-2.1.0.min.js"></script>
+<script src="{{ "" | relURL }}js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 done = false;
 $(document).ready(function(){
@@ -132,8 +132,8 @@ $(document).ready(function(){
 </script>
 {{ end }}
 {{ if and (eq .Section "post") (.Site.Params.FancyBox) }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="{{ .Site.BaseURL }}fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="{{ "" | relURL }}fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="{{ "" | relURL }}fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   $('.article-content').each(function(i){
